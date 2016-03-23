@@ -101,8 +101,8 @@ install:
 	mkdir -p ${ID}/
 	cp -r julia_root/* ${ID}/
 	mkdir -p ~/bin
-	ln -s ${ID}/bin/julia ~/bin/julia
-	echo "push!(LOAD_PATH, ".")" >> ~/.juliarc.jl
+	ln -sf ${ID}/bin/julia ~/bin/julia
+	echo "push!(LOAD_PATH, \".\")" >> ~/.juliarc.jl
 
 ###############################################################################
 # House keeping.
