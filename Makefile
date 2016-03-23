@@ -2,12 +2,12 @@
 ###############################################################################
 # Config.
 
-#JULIA_CPU_TARGET=native
-#OPENBLAS_TARGET_ARCH=native
+JULIA_CPU_TARGET=native
+OPENBLAS_TARGET_ARCH=native
 
 # A10
-JULIA_CPU_TARGET=bdver2
-OPENBLAS_TARGET_ARCH=BULLDOZER
+#JULIA_CPU_TARGET=bdver2
+#OPENBLAS_TARGET_ARCH=BULLDOZER
 
 OPENBLAS_DYNAMIC_ARCH=0
 
@@ -55,7 +55,7 @@ windows_deps:
 status/downloaded:
 	git clone git://github.com/JuliaLang/julia.git
 	cd julia && make full-source-dist
-	backup -z julia
+	zip -9r julia-$(shell date +%F-%T | sed 's/:/-/g').zip julia/
 	mkdir status
 	touch $@
 
@@ -76,7 +76,7 @@ status/cleanup_root: status/built
 	rm -rf julia_root/share/julia/test/
 	touch $@
 
-S=julia_root/share/julia/site
+S=${PWD}/julia_root/share/julia/site
 status/install_packages: status/cleanup_root
 	JULIA_PKGDIR=${S} julia_root/bin/julia install_packages.jl
 	touch $@
@@ -102,7 +102,7 @@ install:
 	cp -r julia_root/* ${ID}/
 	mkdir -p ~/bin
 	ln -s ${ID}/bin/julia ~/bin/julia
-	echo "push!(LOAD_PATH, ".")" > ~/.juliarc.jl
+	echo "push!(LOAD_PATH, ".")" >> ~/.juliarc.jl
 
 ###############################################################################
 # House keeping.
