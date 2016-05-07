@@ -32,8 +32,9 @@ Pkg.clone("https://github.com/JuliaDSP/DSP.jl")
 Pkg.add("Wavelets")
 Pkg.clone("https://github.com/JayKickliter/Radio.jl")
 
-Pkg.add("Distributions")
 Pkg.clone("https://github.com/jlep/Multicombinations.jl")
+Pkg.add("Combinatorics")
+
 Pkg.add("Iterators")
 Pkg.add("Cartesian")
 
@@ -43,6 +44,8 @@ Pkg.add("PowerSeries")
 Pkg.add("Roots")
 Pkg.clone("https://github.com/JuliaControl/Control.jl")
 
+Pkg.add("Distributions")
+Pkg.add("Regression")
 Pkg.add("Optim")
 Pkg.add("NLopt")
 Pkg.add("JuMP")
