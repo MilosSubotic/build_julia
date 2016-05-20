@@ -97,7 +97,7 @@ status/cleanup_site: status/install_packages
 all: status/cleanup_site
 
 ID=${PREFIX}/julia/${VERSION}
-install:
+install: all
 	mkdir -p ${ID}/
 	cp -r julia_root/* ${ID}/
 	mkdir -p ~/bin
