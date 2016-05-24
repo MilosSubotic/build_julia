@@ -50,4 +50,5 @@ Pkg.add("Optim")
 Pkg.add("NLopt")
 Pkg.add("JuMP")
 
+Pkg.add("Interpolations")
 
