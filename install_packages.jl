@@ -52,3 +52,5 @@ Pkg.add("JuMP")
 
 Pkg.add("Interpolations")
 
+Pkg.add("LRUCache")
+
