@@ -53,7 +53,7 @@ windows_deps:
 # Build julia root and install packages.
 
 status/downloaded:
-	git clone git://github.com/JuliaLang/julia.git
+	git clone https://github.com/JuliaLang/julia
 	cd julia && make full-source-dist
 	zip -9r julia-$(shell date +%F-%T | sed 's/:/-/g').zip julia/
 	mkdir status
