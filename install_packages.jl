@@ -25,6 +25,7 @@ Pkg.add("Winston")
 Pkg.add("Gadfly")
 Pkg.add("Interact")
 Pkg.clone("https://github.com/jverzani/GtkInteract.jl")
+Pkg.add("UnicodePlots")
 
 Pkg.add("SymPy")
 
