@@ -14,6 +14,7 @@ Pkg.clone("https://github.com/MilosSubotic/Silo.jl")
 Pkg.build("Silo")
 using Silo
 
+Pkg.add("ProfileView")
 Pkg.add("FastAnonymous")
 Pkg.add("Lumberjack")
 
@@ -55,4 +56,3 @@ Pkg.add("JuMP")
 Pkg.add("Interpolations")
 
 Pkg.add("LRUCache")
-
